@@ -29,7 +29,7 @@ function easyStart(){
     boardSize=7;
     numberOfMines=10;
 
-    newGame(boardSize,numberOfMines,10);
+    newGame(boardSize,numberOfMines,301);
 
 }
 function mediumStart(){
