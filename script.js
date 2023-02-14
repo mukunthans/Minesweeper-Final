@@ -27,7 +27,7 @@ resetButton.addEventListener("click",easyStart);
 function easyStart(){
     resetValues();
     boardSize=7;
-    numberOfMines=1;
+    numberOfMines=10;
 
     newGame(boardSize,numberOfMines,10);
 
