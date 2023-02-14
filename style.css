@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    background-color:#333;
+    min-height: 100vh;
+}
+.diff_level{
+  width: 50%;
+  height:auto;
+  padding:1rem;
+  display:flex;
+  justify-content: space-between;
+}
+
+.diff_level-btn{
+  padding:0.5em;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #333;
+  color:whitesmoke
+
+}
+
+.diff_level-btn:hover{
+
+  background-color: white;
+  color:black;
+
+}
+
+
+
+
+.gameSetup{
+    margin:0;
+    background-color:#333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+
+}
+
+.title{
+    margin:20px;
+    font-size: clamp(1rem,10vh,3rem);
+}
+.subtext{
+    color:#ccc;
+    font-size:min(1.5rem,5vh);
+    margin-bottom: 10px;
+}
+.game{
+  margin-top: 2rem;
+  border-top: 1px solid black;
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer{
+  font-size: clamp(1.5rem,4vh,2rem);
+  margin-bottom: 5px;
+  background: black;
+  padding:0.5rem;
+  border-radius: 10px;
+}
+
+button{
+    background-color: aliceblue;
+}
+
+button:hover{
+  background-color: #BBB;
+}
+
+.reset{
+  margin:1rem;
+  padding:0.5rem;
+  font-size: max(1.5rem,5vh);
+
+  border-radius: 10%;
+  font-weight: bold;
+}
+
+
+.board {
+  display: grid;
+  height:min(50vh,500px);
+  width:min(80vw,500px);
+  place-content: center;
+  font-size: 3em;
+  margin:auto;
+  padding: 10px;
+  background-color: #777;
+  margin-bottom:3rem;
+
+}
+
+.board > * {
+  color: white;
+  user-select: none;
+  display: grid;
+  place-content: center;
+  font-size: 1rem;
+  border:1px solid black;
+}
+
+.board > [data-status="hidden"] {
+  background-color: #BBB;
+  cursor: pointer;
+}
+
+.board > [data-status="mine"] {
+  background-color: red;
+  border:1.5px solid black;
+
+}
+.board > [data-status="mine"]::before {
+  content: '💣';
+  font-size: 100%;
+
+  width:100%;
+  height: 100%;
+  display:grid;
+  place-content: center;  
+}
+
+.board > [data-status="number"] {
+  background-color: none;
+}
+
+
+.board > [data-status="marked"]::before {
+  content:'🚩';
+  width:100%;
+  height: 100%;
+  display:grid;
+  place-content: center;
+}
